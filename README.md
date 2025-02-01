@@ -1,2 +1,3 @@
 # bluedog-v2
-better
+
+Initial save state must be in slot 3.
