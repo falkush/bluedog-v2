@@ -2,6 +2,8 @@
 
 Initial save state must be in slot 3.
 
+# Letters meaning
+
 n: number of simulations
 
 g: number of time glitch happened
