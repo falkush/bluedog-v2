@@ -1,18 +1,18 @@
 input = {};
 doubleglitch=false;
 stop=0;
+savenb=4;
 
 
-i=0;
-glitchcount=0;
-second=0;
-almost=0;
-bad=0;
-
-
-
-savestate.loadslot(3);
-savestate.saveslot(1);
+i=28349;
+glitchcount=13;
+second=4;
+almost=3153;
+bad=25192;
+s1=0;
+s2=1;
+s3=0;
+s4=0;
 
 while true do
 ff=true;
@@ -40,7 +40,7 @@ for k=0,1000 do
 	
 	for j=0,1600 do
 		emu.frameadvance();
-		gui.text(0,0,"nb: " .. i .. " | glitch: " .. glitchcount .. " | 2nd: " .. second .. " | almst: " .. almost .. " | bad: " .. bad);
+		gui.text(0,0,"n:" .. i .. "|g:" .. glitchcount .. "|s:" .. second .. "|a:" .. almost .. "|b:" .. bad .. "|k:" .. s1 .. "|w:" .. s2 .. "|p:" .. s3 .. "|d:" .. s4);
 	end
 
 	glitch=false;
@@ -60,7 +60,7 @@ for k=0,1000 do
 		if test ~= 0 then
 			inrace=false;
 		end
-		gui.text(0,0,"nb: " .. i .. " | glitch: " .. glitchcount .. " | 2nd: " .. second .. " | almst: " .. almost .. " | bad: " .. bad);
+		gui.text(0,0,"n:" .. i .. "|g:" .. glitchcount .. "|s:" .. second .. "|a:" .. almost .. "|b:" .. bad .. "|k:" .. s1 .. "|w:" .. s2 .. "|p:" .. s3 .. "|d:" .. s4);
 	end
 	
 	if test==13611 then
@@ -74,23 +74,32 @@ for k=0,1000 do
 	
 	if test==13610 and glitch then
 		stop=1; --first place glitched (maybe also true)
+		s1=s1+1;
 	elseif test==13610 then
 		stop=2; --first place true
+		s2=s2+1;
 	elseif test==13611 and glitch then
 		stop=3; --second place glitch happened
+		s3=s3+1;
 	elseif doubleglitch then
 		stop=4; --double glitch
+		s4=s4+1;
 	end
 
 	if stop ~= 0 then
-		while true do
-			if ff then
-				gui.text(0,0,"nb: " ..i .. "     glitch: " .. glitchcount .. "     STOP: " .. stop .. "   save: 2");
-			else
-				gui.text(0,0,"nb: " ..i .. "     glitch: " .. glitchcount .. "     STOP: " .. stop .. "   save: 1");
-			end
-			emu.frameadvance();
+		if ff then
+			savestate.loadslot(2);
+			savestate.saveslot(savenb);
+		else
+			savestate.loadslot(1);
+			savestate.saveslot(savenb);
 		end
+
+		savenb=savenb+1;
+		if savenb==10 then
+			savenb=4;
+		end
+		stop=0;
 	end
 
 	i=i+1;
