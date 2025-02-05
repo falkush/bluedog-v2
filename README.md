@@ -3,6 +3,7 @@
 Initial save state must be in slot 3.
 
 n: number of simulations
+
 g: number of time glitch happened
 s: number of second place
 a: number of 3rd, 4th or 5th place
