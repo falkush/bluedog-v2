@@ -1,6 +1,6 @@
 # bluedog-v2
 
-Initial save state must be in slot 1.
+Initial save state must be in slot 1 and 3.
 
 # Letters meaning
 
