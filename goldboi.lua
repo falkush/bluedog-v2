@@ -4,17 +4,30 @@ stop=0;
 savenb=4;
 
 
-i=28349;
-glitchcount=13;
-second=4;
-almost=3153;
-bad=25192;
-s1=0;
-s2=1;
+i=118860;
+glitchcount=60;
+second=16;
+almost=13462;
+bad=105373;
+s1=4;
+s2=6;
 s3=0;
 s4=0;
 
 while true do
+
+savestate.loadslot(3);
+for k=0,1000 do
+	emu.frameadvance();
+	gui.text(0,0,"////duct tape quick fix///");
+	emu.frameadvance();
+	gui.text(0,0,"////duct tape quick fix///");
+	emu.frameadvance();
+	gui.text(0,0,"////duct tape quick fix///");
+end
+savestate.saveslot(3);
+savestate.saveslot(1);
+
 ff=true;
 for k=0,1000 do
 	if ff then
@@ -104,17 +117,4 @@ for k=0,1000 do
 
 	i=i+1;
 end
-
-savestate.loadslot(3);
-for k=0,1000 do
-	emu.frameadvance();
-	gui.text(0,0,"////duct tape quick fix///");
-	emu.frameadvance();
-	gui.text(0,0,"////duct tape quick fix///");
-	emu.frameadvance();
-	gui.text(0,0,"////duct tape quick fix///");
-end
-savestate.saveslot(3);
-savestate.saveslot(1);
-
 end
