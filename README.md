@@ -1,6 +1,6 @@
 # bluedog-v2
 
-Initial save state must be in slot 1 and 3.
+Initial save state must be in slot 3.
 
 # Letters meaning
 
@@ -25,3 +25,5 @@ d: number of time the glitch happened to two dogs or more in a single race
 # Blue First Gold Last (actually tie for first place)
 
 https://www.youtube.com/watch?v=xEQQu6QvHJA
+
+To reproduce the win, download the save state and lua script from the folder \bluefirstgoldlast. Put the save state file in \BizHawk-2.9.1-win-x64\N64\State and the lua script in \BizHawk-2.9.1-win-x64\Lua. Then boot Bizhawk, go to Tools->Lua Console. In the Lua Console, go to Script->Open Script... then choose the _playwin6.lua.
