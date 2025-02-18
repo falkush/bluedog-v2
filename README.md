@@ -21,3 +21,7 @@ w: number of true win
 p: number of time blue dog finished second and the glitch happened (true win stolen)
 
 d: number of time the glitch happened to two dogs or more in a single race
+
+# Blue First Gold Last (actually tie for first place)
+
+https://www.youtube.com/watch?v=xEQQu6QvHJA
