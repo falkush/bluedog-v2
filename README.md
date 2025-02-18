@@ -26,4 +26,4 @@ d: number of time the glitch happened to two dogs or more in a single race
 
 https://www.youtube.com/watch?v=xEQQu6QvHJA
 
-To reproduce the win, download the save state and lua script from the folder \bluefirstgoldlast. Put the save state file in \BizHawk-2.9.1-win-x64\N64\State and the lua script in \BizHawk-2.9.1-win-x64\Lua. Then boot Bizhawk, go to Tools->Lua Console. In the Lua Console, go to Script->Open Script... then choose the _playwin6.lua.
+To reproduce the win, download the save state and lua script from the folder \bluefirstgoldlast. Put the save state file in \BizHawk-2.9.1-win-x64\N64\State and the lua script in \BizHawk-2.9.1-win-x64\Lua. Then boot Bizhawk, load the majora's mask rom, go to Tools->Lua Console. In the Lua Console, go to Script->Open Script... then choose the _playwin6.lua. The SHA-256 hash of the rom is efb1365b3ae362604514c0f9a1a2d11f5dc8688ba5be660a37debf5e3be43f2b.
