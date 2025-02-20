@@ -1,6 +1,6 @@
 # bluedog-v2
 
-Initial save state must be in slot 3.
+Initial save state must be in slot 3. The save state must be done such that pressing A starts the race. I recommend using Rice as the video plugin (N64->Plugins->Active Video Plugin) as I got better performances under it.
 
 # Letters meaning
 
