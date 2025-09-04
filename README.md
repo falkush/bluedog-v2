@@ -1,6 +1,6 @@
 # bluedog-v2
 
-Initial save state must be in slot 1 and copied in slot 3 and 4. The save state must be done such that pressing A starts the race. I recommend using Rice as the video plugin (N64->Plugins->Active Video Plugin) as I got better performances under it.
+Initial save state must be in slot 1 and copied in slot 3 and 4. The save state must be done such that pressing A starts the race. I recommend using Rice as the video plugin (N64->Plugins->Active Video Plugin) as I got better performances under it. Be sure that bluedog_stats.txt is in the same folder as goldboi.lua. It is used to track stats about the simulations, which are important for the duct tape fix I implemented. In short, Bizhawk doesn't like saving and loading save states over and over, and it starts to glitch after around 1k iterations, so I implemented a quick fix for this.
 
 # Letters meaning
 
